@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { InputComponent } from "./input/input.component";
+import { OutputComponent } from "./output/output.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [InputComponent, OutputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'app';
+  inputValue: string = 'Button is not clicked yet';
+
+  outputEvent(data: string) {
+    this.inputValue = data;
+  }
 }

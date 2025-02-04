@@ -1,0 +1,12 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-input',
+  imports: [],
+  templateUrl: './input.component.html',
+  styleUrl: './input.component.scss'
+})
+export class InputComponent {
+  // @Input is used to receive data from parent component
+  @Input('input') inputValue!: string;
+}
